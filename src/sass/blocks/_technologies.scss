@@ -1,0 +1,94 @@
+.technologies {
+    &__subtitle {
+        position: relative;
+        text-align: center;
+        margin-top: 126px;
+        @include before_circle;
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+    }
+    &__title {
+        text-align: center;
+        margin-top: 6px;
+    }
+    &__divider {
+        margin: 0 auto;
+        margin-top: 25px;
+        @include divider;
+    }
+    &__grid-container {
+        display: grid;
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: auto;
+        gap: 13px;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    &__block {
+        position: relative;
+        border: 1px solid #000000;
+        padding: 30px 29px 25px 30px;
+    }
+    &__block-title {
+        position: absolute;
+        top: 115px;
+        left: 30px;
+    }
+    &__block-text {
+        position: absolute;
+        width: 211px;
+        min-height: 94px;
+        top: 151px;
+        left: 30px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__counters {
+        display: grid;
+        grid-template-rows: repeat(2, 70px);
+        grid-template-columns: repeat(3, 350px);
+        margin-top: 120px;
+        justify-content: center;
+        grid-row-gap: 30px;
+        grid-column-gap: 45px;
+    }
+    &__counters-block {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    &__counters-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__counters-title {
+        position: relative;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 13px;
+        @include before_circle;
+    }
+    &__counters-percent {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__counters-scale {
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        align-self: end;
+        border-radius: 4px;
+        &_percent {
+            background: $main-color;
+            height: 100%;
+            width: 90%;
+            border-radius: 4px;
+        }
+    }
+}

@@ -2,7 +2,6 @@
     &__title {
         position: relative;
         text-align: center;
-
         @include before_circle;
         &:before {
             left: 50%;
@@ -16,6 +15,92 @@
         margin: 0 auto;
         margin-top: 25px;
         @include divider;
+    }
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+        justify-content: center;
+    }
+    &__column-subtitle {
+        position: relative;
+        padding-left: 50px;
+        margin: 0;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: $main-color;
+            border: none;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__column {
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 18px);
+                    position: absolute;
+                    top: -18px;
+                    left: 7.5px;
+                    border: none;
+                    background-color: #000000;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 43px;
+            top: 63px;
+            left: 7.5px;
+            border: none;
+            background-color: #000000;
+        }
+    }
+    &__item-head {
+        padding: 45px 0 0 106px;
+        h4 {
+            margin: 0;
+        }
+    }
+    &__item-body {
+        padding: 12px 0 0 50px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__item-icon {
+        position: absolute;
+        top: 45px;
+        left: 50px;
+        @include before_circle;
+        img {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+        }
+    }
+    &__item-certificate {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: #000000;
+        margin-top: 5px;
     }
 }
 
