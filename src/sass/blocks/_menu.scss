@@ -13,6 +13,11 @@
         width: 30px;
         height: 3px;
         background: #151812;
+        transition: all 0.6s;
+        &:hover {
+            background: rgba(255, 0, 0, 0.8);
+            box-shadow:  #ff0000 0 0 15px;
+        }
     }
     span.long {
         width: 36px;
@@ -50,6 +55,9 @@
         top: 24px;
         right: 25px;
         cursor: pointer;
+        &:hover {
+            color: #ff0000;
+        }
     }
     &__list {
         list-style-type: none;
@@ -77,12 +85,14 @@
         }
         &:hover {
             &::before {
-                background-color: #fff;
-
+                background-color: #fff; 
             }
+            text-shadow: #ffffff 0 0 15px;
+            transition: all .4s;
         }
         a { 
             color: #FFFFFF;
+            text-decoration: none;
         }
     }
     &__social {
