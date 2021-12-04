@@ -1,0 +1,97 @@
+.contacts {
+    &__wrapper {
+        padding: 120px 35px 92px 52px;
+        display: grid;
+        grid-template: 600px / 400px 585px;
+        column-gap: 68px;
+        justify-content: center;
+    }
+    &__photo {
+        img {
+            width: 100%;
+        }
+    }
+    &__subtitle {
+        margin: 6px 0 0 12px;
+        position: relative;
+        z-index: 2;
+        @include before_circle;
+        &::before {
+            content: '';
+            left: -12px;
+        }
+    }
+    &__title {
+        margin-top: 6px;
+    }
+    &__divider {
+        @include divider;
+    }
+    &__ways, &__social, &__write {
+        margin-top: 20px;
+    }
+    &__link {
+        margin-right: 25px;
+        &:hover {
+            text-decoration: none;
+        }
+        .facebook {
+            transform: rotate(90deg);
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px 45px / repeat(2, 280px);
+        column-gap: 25px;
+        row-gap: 29px;
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+        lable {
+            position: absolute;
+            left: 12px;
+            bottom: 36px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 20px;
+        }
+        lable {
+            position: absolute;
+            left: 12px;
+            bottom: 181px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+
+    }
+    &__btn {
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
