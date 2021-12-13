@@ -96,7 +96,7 @@
         </div>
         <div class="container">
             <div class="title title_fz16 promo__subtitle">Меня зовут Александра Смит</div>
-            <h1 class="title title_fz48 promo__title">Я web-разработчик 
+            <h1 class="title title_fz48 promo__title">Я web-разработчик <br>
                 из города Москва</h1>
             <div class="promo__btns">
                 <a href="#" class="promo__link btn">Портфолио</a>
@@ -104,10 +104,17 @@
             </div>
         </div>
     </section>
+
     <section class="about-me">
         <div class="container">
             <div class="about-me__content">
-                <div class="about-me__photo"><img src="img/main_photo.jpg" alt="photo"></div>
+                <div class="about-me__photo">
+                    <img srcset="img/main_photo-min.jpg 300w,
+                                img/main_photo.jpg 400w"
+                        sizes="(max-width: 576px) 280px,
+                                (min-width: 577px) 400px"
+                    src="img/main_photo.jpg" alt="photo">
+                </div>
                 <div class="about-me__descr">
                     <div class="about-me__subtitle title_fz14">Про меня</div>
                     <div class="about-me__title title_fz36">Меня зовут Александра</div>
@@ -134,6 +141,7 @@
             </div>
         </div>
     </section>
+
     <section class="resume">
         <div class="container">
             <h2 class="resume__title title_fz16">Опыт</h2>
@@ -224,6 +232,7 @@
             </div>
         </div>
     </section>
+
     <section class="technologies">
         <div class="container">
             <div class="technologies__subtitle title_fz16">Навыки</div>
@@ -325,7 +334,8 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+
+<!--     <section class="portfolio">
         <div class="container">
             <div class="portfolio__subtitle title_fz16">Портфолио</div>
             <h2 class="portfolio__title title_fz36">Мои работы</h2>
@@ -352,8 +362,9 @@
                 </a>
             </div>
         </div>
-    </section>
-    <section class='price'>
+    </section> -->
+
+<!--     <section class='price'>
         <div class="container">
             <div class="price__subtitle title_fz16">Прайс-лист</div>
             <div class="price__divider"></div>
@@ -390,9 +401,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class='contacts'>
+<!--     <section class='contacts'>
         <div class="container">
             <div class="contacts__wrapper">
                     <div class="contacts__photo">
@@ -418,25 +429,29 @@
 
                         <form action="#" class="contacts__form">
                             <div class="contacts__input">
-                                <input name="name" id="name" type="text" placeholder="Иван">
+                                <input name="name" id="name" type="text"required placeholder="Иван">
                                 <lable for='name'>Ваше имя</lable>
                             </div>
                             <div class="contacts__input">
-                                <input name="email" id="email" type="text" placeholder="@mail">
+                                <input name="email" id="email" type="text"required placeholder="@mail">
                                 <lable for='email'>Ваша почта</lable>
                             </div>
                             <div class="contacts__textarea">
                                 <textarea name="text" id="text" placeholder="Text"></textarea>
                                 <lable for='text'>Ваше сообщение</lable>
                             </div>
-                            <div>
+                            <div class="contacts__triggers">
                                 <button class='contacts__btn btn'>Отправить сообщение</button>
+                                <div class="contacts__policy">
+                                    <input required type="checkbox">
+                                    <span>Я согласен(а) <a href="policy.html"> с политикой конфиденциальности</a></span>
+                                </div>
                             </div>
                         </form>
                     </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <script src="js/script.js"></script>
 </body>
 </html>
